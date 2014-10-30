@@ -1,1 +1,1 @@
-# The Angular $ Polymer talk
+# The Angular & Polymer talk
