@@ -1,0 +1,13 @@
+.idea
+.DS_STORE
+.lock
+.log
+
+node_modules
+src/bower_components
+www
+
+platforms/
+
+plugins/*.json
+src/app/app-template.js

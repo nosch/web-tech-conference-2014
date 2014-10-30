@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.ionicframework.do-it694599" version="0.0.1"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Do It!</name>
+    <description>
+        A sample app.
+    </description>
+    <author email="norbert@schmidt-netzwerk.de"
+            href="http://schmidt-netzwerk.de">
+        Ionic Framework Team
+    </author>
+    <content src="index.html"/>
+    <access origin="*"/>
+    <preference name="webviewbounce" value="false"/>
+    <preference name="UIWebViewBounce" value="false"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="BackupWebStorage" value="none"/>
+    <preference name="AutoHideSplashScreen" value="false"/>
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true"/>
+    </feature>
+
+    <platform name="ios">
+        <icon src="www/res/ios/icon-60@2x.png" />
+        <splash src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
+</widget>

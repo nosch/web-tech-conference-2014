@@ -1,0 +1,29 @@
+<ion-pane class="login-view">
+    <ion-nav-bar animation="nav-title-slide-ios7" class="bar-dark">
+        <button ui-sref="intro"
+                class="button button-clear">
+            <i class="icon ion-ios7-arrow-left"></i>
+        </button>
+    </ion-nav-bar>
+
+    <ion-view title="Anmeldung">
+        <ion-content scroll="false">
+            <ion-list>
+                <ion-item class="item-input">
+                    <i class="icon ion-ios7-person placeholder-icon"></i>
+                    <input type="text" placeholder="Benutzername">
+                </ion-item>
+
+                <ion-item class="item-input">
+                    <i class="icon ion-ios7-locked placeholder-icon"></i>
+                    <input type="password" placeholder="Kennwort">
+                </ion-item>
+            </ion-list>
+
+            <button ui-sref="task.list"
+                    class="button button-full button-balanced">
+                    <span>Anmelden</span>
+            </button>
+        </ion-content>
+    </ion-view>
+</ion-pane>

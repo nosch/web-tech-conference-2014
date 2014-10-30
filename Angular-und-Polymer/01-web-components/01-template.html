@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Template</title>
+    </head>
+    <body>
+        <!-- Declaring the template -->
+        <template id="logo">
+            <style>
+                div {
+                    padding: 10px;
+                    border: 2px solid #9acd32;
+                    display: inline-block;
+                }
+            </style>
+
+            <div>
+                <img src="" alt=""/>
+            </div>
+        </template>
+
+        <script>
+            var template = document.getElementById('logo');
+
+            // Set image attributes at runtime
+            template.content.querySelector('img').src = 'http://webcomponents.org/img/logo.svg';
+            template.content.querySelector('img').alt = 'Web Components';
+
+            // Clone template's content, deep copy
+            var templateClone = document.importNode(template.content, true);
+
+            // "Activating" the template
+            document.body.appendChild(templateClone);
+
+            if (document.querySelector('template')) {
+                alert('Template child nodes found!');
+            } else {
+                alert('No template child nodes available!');
+            }
+        </script>
+    </body>
+</html>

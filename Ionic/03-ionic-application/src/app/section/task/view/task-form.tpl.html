@@ -1,0 +1,35 @@
+<ion-view title="{{taskForm.heading}}">
+    <ion-content scroll="false" class="task-form-view">
+        <ion-list>
+            <ion-item class="item-input">
+                <label class="input-label">Was?</label>
+                <input type="text"
+                       placeholder="Was?"
+                       ng-model="taskForm.item.title">
+            </ion-item>
+            <ion-item class="item-input">
+                <label class="input-label">Wann?</label>
+                <input type="date"
+                       placeholder="Wann?"
+                       ng-model="taskForm.item.date">
+            </ion-item>
+            <ion-item class="item-input">
+                <label class="input-label">Details?</label>
+                <input type="text"
+                       ng-model="taskForm.item.description"
+                       placeholder="Details?">
+            </ion-item>
+        </ion-list>
+
+        <div class="buttons">
+            <button ng-click="taskForm.save()"
+                    class="button button-full button-balanced">
+                <span>Speichern</span>
+            </button>
+            <button ng-click="taskForm.reset()"
+                    class="button button-full button-energized">
+                <span>Abbrechen</span>
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

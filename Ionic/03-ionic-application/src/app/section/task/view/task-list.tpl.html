@@ -1,0 +1,25 @@
+<ion-view title="Aufgaben">
+    <ion-content>
+        <ion-list show-delete="false" can-swipe="true">
+            <ion-item ng-repeat="item in taskList.items track by item.id" item="item" class="slide-in-left">
+                <section on-tap="taskList.showDetails(item)">
+                    <h2>
+                        {{item.title}}
+                        <span>{{item.date | date: 'dd.MM.yyyy'}}</span>
+                    </h2>
+                    <p>{{item.description}}</p>
+                </section>
+                <ion-option-button on-tap="taskList.showTaskOptions(item)" class="button-balanced">
+                    <span>Optionen</span>
+                </ion-option-button>
+                <ion-option-button on-tap="taskList.deleteItem($index, item)" class="button-energized">
+                    <span>Löschen</span>
+                </ion-option-button>
+            </ion-item>
+
+            <ion-item ng-show="!taskList.items.length" on-tap="taskList.showForm()">
+                <h2 class="no-data-message">Nichts zu tun?</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

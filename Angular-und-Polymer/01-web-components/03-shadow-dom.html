@@ -1,0 +1,22 @@
+<body>
+    <template id="logo">...</template>
+
+    <!-- Declaring the shadow host -->
+    <div id="imageTag"></div>
+
+    <script>
+        // Shadow root definition
+        var shadow = document.querySelector('#imageTag').createShadowRoot();
+        var template = document.querySelector('#logo');
+
+        // Set image attributes at runtime
+        template.content.querySelector('img').src = 'http://webcomponents.org/img/logo.svg';
+        template.content.querySelector('img').alt = 'Web Components';
+
+        // Clone template's content, deep copy
+        var templateClone = document.importNode(template.content, true);
+
+        // Appending the template to the shadow host
+        shadow.appendChild(templateClone);
+    </script>
+</body>

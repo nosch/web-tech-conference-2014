@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="application">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Do It!</title>
+
+        <!-- build:css css/app.css -->
+        <link href="bower_components/ionic/css/ionic.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- endbuild -->
+
+        <!-- If using Sass (run gulp sass first), then uncomment below and remove the CSS includes above -->
+        <!-- <link href="css/ionic.app.css" rel="stylesheet"> -->
+    </head>
+    <body>
+        <ion-nav-view animation="slide-left-right-ios7"></ion-nav-view>
+
+        <!-- build:js js/vendor.js -->
+        <script src="bower_components/ionic/js/ionic.bundle.js"></script>
+        <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <!-- endbuild -->
+        <script src="cordova.js"></script>
+        <!-- build:js js/app.js -->
+        <script src="app/app.js"></script>
+        <script src="app/app-config.js"></script>
+        <script src="app/app-template.js"></script>
+        <script src="app/service/underscore.js"></script>
+        <script src="app/section/intro/intro.js"></script>
+        <script src="app/section/intro/intro-config.js"></script>
+        <script src="app/section/register/register.js"></script>
+        <script src="app/section/register/register-config.js"></script>
+        <script src="app/section/login/login.js"></script>
+        <script src="app/section/login/login-config.js"></script>
+        <script src="app/section/task/task.js"></script>
+        <script src="app/section/task/task-config.js"></script>
+        <script src="app/section/task/service/task-store.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
+

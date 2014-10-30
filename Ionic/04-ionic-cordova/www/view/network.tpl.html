@@ -1,0 +1,18 @@
+<ion-view title="Network">
+    <ion-content class="padding text-center">
+        <h4>
+            Network status:
+            <span ng-class="{balanced: isOnline(), assertive: !isOnline()}">
+                {{isOnline() ? 'online' : 'offline'}}
+            </span>
+        </h4>
+
+        <h4 ng-show="isOnline()">
+            Network type:
+            <span class="positive">
+                {{getNetworkType()}}
+            </span>
+        </h4>
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Custom Elements - Creating new elements</title>
+    </head>
+    <body>
+        <!-- Creating a new element from a template -->
+        <template id="logoTemplate">
+            <style>
+                div {
+                    padding: 10px;
+                    border: 2px solid #9acd32;
+                    display: inline-block;
+                }
+            </style>
+
+            <div>
+                <img src="" alt=""/>
+            </div>
+        </template>
+
+        <x-web-components-logo></x-web-components-logo>
+
+        <script>
+            // Prototype of the new element, extending standard HTMLElement
+            var proto = Object.create(HTMLElement.prototype, {
+                createdCallback: {
+                    value: function() {
+                        var template = document.querySelector('#logoTemplate');
+
+                        template.content.querySelector('img')
+                                .src = 'http://webcomponents.org/img/logo.svg';
+                        template.content.querySelector('img')
+                                .alt = 'Web Components';
+
+                        var templateClone = document.importNode(template.content, true);
+
+                        this.createShadowRoot().appendChild(templateClone);
+                    }
+                }
+            });
+
+            // Teach the browser about the new element
+            document.registerElement('x-web-components-logo', {prototype: proto});
+        </script>
+    </body>
+</html>

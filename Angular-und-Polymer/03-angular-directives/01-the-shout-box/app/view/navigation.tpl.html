@@ -1,0 +1,10 @@
+<div ng-controller="NavigationCtrl" id="navigation">
+    <ul class="side-nav">
+        <li ng-repeat="item in navItems"
+            ng-class="{active: item.index === currentRoute.index}">
+            <a href="{{item.hash}}">
+                <i ng-class="item.icon"></i> {{item.title}}
+            </a>
+        </li>
+    </ul>
+</div>

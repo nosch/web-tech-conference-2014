@@ -1,0 +1,18 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="x-pleasant-button" extends="button">
+    <template>
+        <link rel="stylesheet" href="pleasant-button.css">
+
+        <content></content>
+    </template>
+    <script>
+        Polymer('x-pleasant-button', {
+            created: function () {
+                this.addEventListener('click', function (e) {
+                    alert('Thank you very much!');
+                });
+            }
+        });
+    </script>
+</polymer-element>

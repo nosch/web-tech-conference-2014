@@ -1,0 +1,11 @@
+<ion-view title="Camera">
+    <ion-content class="padding text-center">
+        <h3 ng-hide="photo">Say cheese!</h3>
+        <img ng-show="photo" ng-src="{{photo}}" style="max-width: 100%">
+
+        <button ng-click="takePicture()"
+                class="button button-block button-positive">Take a photo &hellip;
+        </button>
+    </ion-content>
+</ion-view>
+

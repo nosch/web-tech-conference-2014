@@ -1,0 +1,19 @@
+<h2>{{heading}}</h2>
+
+<div ng-repeat="message in messages"
+     class="panel callout radius">
+    <h5>{{message.user}}</h5>
+    <p>{{message.text}}</p>
+    <div>
+        <small>{{message.date}}</small>
+        <a ng-click="remove($index)"
+           class="right">
+            <i class="fi-trash"></i> Remove
+        </a>
+    </div>
+</div>
+
+<div ng-show="!messages.length">
+    <p>Nobody posted a message yet.</p>
+    <p><a href="#shout">Be the first!</a></p>
+</div>

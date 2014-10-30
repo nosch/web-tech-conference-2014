@@ -1,0 +1,129 @@
+/* Intro view */
+.intro-view .scroll-content {
+    background-image: url("../img/post-it-screen.png");
+}
+
+.intro-view h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.intro-view h1 span {
+    padding-left: 45px;
+    background: url("../img/do-it-logo.png") no-repeat left center;
+}
+
+.intro-view ion-footer-bar {
+    padding: 0;
+}
+
+.intro-view ion-footer-bar .button-bar .button {
+    border-radius: 0;
+}
+
+/* Login view */
+.login-view {}
+
+
+/* Register view */
+.register-view {}
+
+
+/* Task view */
+.task-view .item {
+    cursor: pointer;
+}
+
+.task-view .item h2 span {
+    font-size: 14px;
+    color: #808080;
+    float: right;
+}
+
+.task-view .item-options .button {
+    width: 100px;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.task-view .item-options .button span {
+    position: relative;
+    top:18px;
+    color: inherit;
+}
+
+.action-sheet .button {
+    font-size: 16px;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.task-view .no-data-message {
+    color: rgb(20, 160, 20);
+    text-align: center;
+}
+
+/* Task form view */
+.task-form-view .item textarea {
+    height: 80px;
+}
+
+/* Task menu view */
+.task-menu-view .menu {
+    background-color: #444;
+}
+
+.task-menu-view .item {
+    border-color: #444;
+}
+
+.task-menu-view .item-content {
+    left: 0;
+    right: 0;
+    padding:8px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #444;
+    cursor: pointer;
+}
+
+.task-menu-view .item-content i {
+    margin-right: 10px;
+}
+
+/* Nav bar */
+.nav-bar h1 {
+    font-size: 14px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Overwrites */
+.button, .button.button-full, ion-footer-bar .button-bar .button {
+    margin: 0;
+    border-radius: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.button.button-dark {
+    border-color: #444;
+}
+
+.button.button-balanced {
+    background-color: rgb(20, 160, 20);
+}
+
+.bar.bar-balanced {
+    background-color: rgb(20, 160, 20);
+}
+
+.placeholder-icon {
+    color: #444;
+    font-size: 22px;
+}

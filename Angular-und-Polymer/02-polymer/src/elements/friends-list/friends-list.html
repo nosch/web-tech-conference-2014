@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="x-friends-list">
+    <template>
+        <ul>
+            <template repeat="{{friend in friends}}">
+                <li>{{friend.name}}: <strong>{{friend.city}}</strong></li>
+            </template>
+        </ul>
+        <button on-click="{{addFriend}}">Add new friend!</button>
+    </template>
+    <script>
+        Polymer('x-friends-list', {
+            ready: function () {
+                this.friends = [
+                    {name: 'Fred', city: 'Dortmund'},
+                    {name: 'Hannes', city: 'Bottrop'},
+                    {name: 'Maria', city: 'Berlin'},
+                    {name: 'Peter', city: 'Würzburg'}
+                ];
+                this.newFriend = {
+                    name: 'Karin', city: 'Stuttgart'
+                };
+                this.addFriend = function () {
+                    this.friends.unshift(this.newFriend);
+                }
+            }
+        });
+    </script>
+</polymer-element>

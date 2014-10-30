@@ -1,0 +1,17 @@
+<ion-side-menus>
+    <ion-pane ion-side-menu-content class="task-view">
+        <ion-nav-bar animation="nav-title-slide-ios7" class="bar-dark">
+            <ion-nav-buttons side="left">
+                <button class="button button-clear" menu-toggle="left">
+                    <i class="icon ion-navicon"></i>
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <ion-nav-view></ion-nav-view>
+    </ion-pane>
+
+    <section class="task-menu-view"
+             ng-include="'app/section/task/view/task-menu.tpl.html'"></section>
+
+</ion-side-menus>
